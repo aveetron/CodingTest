@@ -1,0 +1,16 @@
+{% extends "master.html" %} 
+{% block pagecontent %}
+<div class="col-md-12 row align-items-center justify-content-center">
+    <h1 class="center">Tell Me What you want to to today!</h1>
+<div>
+<br><br>
+<div class="col-md-12 row align-items-center justify-content-center">
+    <div class="col-md-6 ">
+        <a href="{% url 'login' %}" type="button" class="btn btn-primary center">Login</a>
+    </div>
+    <div class="col-md-6 element-two">
+        <a href="{% url 'signup' %}" type="button" class="btn btn-secondary center">Signup</a>
+    </div>
+</div>
+
+{% endblock %}

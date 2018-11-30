@@ -1,0 +1,18 @@
+{% extends "master.html" %} 
+{% block pagecontent %}
+    <h1>Register your works!</h1><br>
+    <div class="col-md-12">
+        <a href="{% url 'add-todo' %}" type="button" class="btn btn-primary"> Add new todo </a><br>
+        <br>
+        <a href="{% url 'logout' %}" type="button" class="btn btn-secondary"> Logout </a><br><br>
+    </div>
+    <h2>List of Works </h2>
+    {% for do in todos %}
+        <h2>{{ do.title }} </h2>
+        <p> {{ do.description }} </p>
+        <a href="{% url 'edit-todo' do.id %}" type="button" class="btn btn-success" > Edit </a>
+        <a href="{% url 'delete-todo' do.id %}" type="button" class="btn btn-info">Delete</a>
+        <br>
+    {% endfor %}
+
+{% endblock %}

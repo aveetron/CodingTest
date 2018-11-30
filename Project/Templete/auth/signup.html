@@ -1,0 +1,10 @@
+{% extends "master.html" %} 
+{% block pagecontent %}
+
+<h1>Welcome ! Now sign-up </h1><br>
+<form class="form" method="post" action="/signup/">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <input type="submit" value="submit" class="btn btn-primary">
+</form>
+{% endblock %}
